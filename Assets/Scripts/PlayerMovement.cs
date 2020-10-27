@@ -19,7 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Jump")) {
-            Jump();
+            int levelMask = LayerMask.GetMask("Level");
+            RaycastHit2D castHit = Physics2D.BoxCast(transform.position, new Vector2(1f, .1f), 0f, Vector2.down, 0.01f, levelMask);
+            if (castHit.collider != null) {
+                Jump();
+            }
         }
     }
 

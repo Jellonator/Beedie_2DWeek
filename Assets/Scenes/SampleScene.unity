@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 90233585}
   - component: {fileID: 90233584}
   - component: {fileID: 90233583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 500
-  jumpSpeed: 6
+  jumpSpeed: 8
 --- !u!1 &1259293093
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 1259293096}
   - component: {fileID: 1259293095}
   - component: {fileID: 1259293094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442321830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Geometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
