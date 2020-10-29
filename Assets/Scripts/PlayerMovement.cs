@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D m_rigidBody;
 
+    public Animator spriteAnimator;
+
+    public SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,6 +36,16 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal_input = Input.GetAxis("Horizontal");
         m_rigidBody.velocity = new Vector2(horizontal_input * runSpeed * Time.deltaTime, m_rigidBody.velocity.y);
+        if (horizontal_input < -1e-5) {
+            spriteRenderer.flipX = true;
+        } else if (horizontal_input > 1e-5) {
+            spriteRenderer.flipX = false;
+        }
+        if (Mathf.Abs(horizontal_input) > 1e-5) {
+            spriteAnimator.SetBool("IsRunning", true);
+        } else {
+            spriteAnimator.SetBool("IsRunning", false);
+        }
     }
 
     void Jump()
