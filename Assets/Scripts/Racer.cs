@@ -12,6 +12,8 @@ public class Racer : MonoBehaviour
 
     public Camera cameraReference;
 
+    public Camera spriteCameraReference;
+
     public Transform spriteReference;
 
     private Rigidbody2D m_rigidbody;
@@ -43,6 +45,9 @@ public class Racer : MonoBehaviour
         m_rigidbody.velocity = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * currentSpeed;
 
         Vector3 pos = cameraReference.WorldToViewportPoint(transform.position);
-        spriteReference.position = new Vector3(pos.x, pos.y, -1.0f);
+        // pos.z += 10.0f;
+        Vector3 newpos = spriteCameraReference.ViewportToWorldPoint(pos);
+        spriteReference.position = new Vector3(newpos.x, newpos.y, 1.0f);
+        spriteReference.localScale = Vector3.one * 10.0f / newpos.z;
     }
 }
