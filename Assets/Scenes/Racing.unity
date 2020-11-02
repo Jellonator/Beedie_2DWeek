@@ -7347,8 +7347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a3f0d6e42e37125860d4eba86ae71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumSpeed: 100
-  acceleration: 200
+  maximumSpeed: 10
+  acceleration: 5
   rotationSpeed: 90
 --- !u!50 &1395249001
 Rigidbody2D:
