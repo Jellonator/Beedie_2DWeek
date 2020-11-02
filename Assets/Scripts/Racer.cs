@@ -10,6 +10,10 @@ public class Racer : MonoBehaviour
 
     public float rotationSpeed = 90.0f;
 
+    public Camera cameraReference;
+
+    public Transform spriteReference;
+
     private Rigidbody2D m_rigidbody;
 
     // Start is called before the first frame update
@@ -37,5 +41,8 @@ public class Racer : MonoBehaviour
             currentSpeed = Mathf.Clamp(currentSpeed - acceleration * Time.deltaTime, targetSpeed, currentSpeed);
         }
         m_rigidbody.velocity = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * currentSpeed;
+
+        Vector3 pos = cameraReference.WorldToViewportPoint(transform.position);
+        spriteReference.position = new Vector3(pos.x, pos.y, -1.0f);
     }
 }
