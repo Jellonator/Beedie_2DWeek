@@ -49,7 +49,7 @@ public class Racer : MonoBehaviour
         Vector3 pos = cameraReference.WorldToViewportPoint(transform.position);
         // pos.z += 10.0f;
         Vector3 newpos = spriteCameraReference.ViewportToWorldPoint(pos);
-        spriteReference.position = new Vector3(newpos.x, newpos.y, 1.0f);
+        spriteReference.position = newpos;
         spriteReference.localScale = Vector3.one * 10.0f / newpos.z;
 
         spriteAnimator.SetFloat("Speed", currentSpeed / maximumSpeed);

@@ -18,12 +18,12 @@ public class Coin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = m_worldCamera.WorldToViewportPoint(transform.position);
         // pos.z += 10.0f;
         Vector3 newpos = m_spriteCamera.ViewportToWorldPoint(pos);
-        spriteRenderer.position = new Vector3(newpos.x, newpos.y, 0.0f);
+        spriteRenderer.position = newpos;
         spriteRenderer.localScale = Vector3.one * 10.0f / newpos.z;
     }
 
