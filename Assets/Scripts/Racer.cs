@@ -18,6 +18,8 @@ public class Racer : MonoBehaviour
 
     private Rigidbody2D m_rigidbody;
 
+    public Animator spriteAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,5 +51,7 @@ public class Racer : MonoBehaviour
         Vector3 newpos = spriteCameraReference.ViewportToWorldPoint(pos);
         spriteReference.position = new Vector3(newpos.x, newpos.y, 1.0f);
         spriteReference.localScale = Vector3.one * 10.0f / newpos.z;
+
+        spriteAnimator.SetFloat("Speed", currentSpeed / maximumSpeed);
     }
 }

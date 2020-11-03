@@ -7317,6 +7317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339878219}
   - component: {fileID: 1339878220}
+  - component: {fileID: 1339878221}
   m_Layer: 10
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -7332,7 +7333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339878218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1470113396}
@@ -7378,7 +7379,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7174206445200732899, guid: 8320a8e5791d8537a8396354cf6f9d6f, type: 3}
+  m_Sprite: {fileID: -7273045238768426386, guid: 8274296f987f26ab5b18de8cd3380a35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7389,6 +7390,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1339878221
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339878218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0656dcd23a0c185ca97375e67d31b9dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1395248997
 GameObject:
   m_ObjectHideFlags: 0
@@ -7493,6 +7513,7 @@ MonoBehaviour:
   cameraReference: {fileID: 1107094517}
   spriteCameraReference: {fileID: 176407328}
   spriteReference: {fileID: 1470113396}
+  spriteAnimator: {fileID: 1339878221}
 --- !u!50 &1395249001
 Rigidbody2D:
   serializedVersion: 4
@@ -7554,7 +7575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470113395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1339878219}
