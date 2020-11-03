@@ -10,11 +10,14 @@ public class Coin : MonoBehaviour
 
     private Camera m_spriteCamera;
 
+    private Scoreboard m_scoreboard;
+
     // Start is called before the first frame update
     void Start()
     {
         m_worldCamera = GameObject.FindGameObjectWithTag("WorldCamera").GetComponent<Camera>();
         m_spriteCamera = GameObject.FindGameObjectWithTag("SpriteCamera").GetComponent<Camera>();
+        m_scoreboard = GameObject.FindGameObjectWithTag("Scoreboard").GetComponent<Scoreboard>();
     }
 
     // Update is called once per frame
@@ -32,8 +35,8 @@ public class Coin : MonoBehaviour
     {
         // check that collider is a lemoning and has not yet been found
         if (other.tag == "Player") {
-            print("COIN COLLECT");
             GameObject.Destroy(this.gameObject);
+            m_scoreboard.IncrementCoinCount();
         }
     }
 }
