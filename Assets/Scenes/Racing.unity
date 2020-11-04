@@ -7985,8 +7985,6 @@ MonoBehaviour:
   maximumSpeed: 10
   acceleration: 5
   rotationSpeed: 90
-  cameraReference: {fileID: 1107094517}
-  spriteCameraReference: {fileID: 176407328}
   spriteReference: {fileID: 1470113396}
   spriteAnimator: {fileID: 1339878221}
 --- !u!50 &1395249001
